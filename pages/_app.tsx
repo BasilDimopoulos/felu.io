@@ -1,6 +1,19 @@
+import Nav from '../components/Nav'
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import Head from 'next/head'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+export default function MyApp({ Component, pageProps }: any) {
+  return (
+    <>
+      <Head>
+        <title>Next and MDX Blog</title>
+      </Head>
+      <div className="container">
+        <Nav />
+        <main>
+          <Component {...pageProps} />
+        </main>
+      </div>
+    </>
+  )
+}                                                                                                           
