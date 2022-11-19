@@ -2,11 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Mona-Sans';
+  src:
+    url('../assets/fonts/Mona-Sans-Black.woff2'),
+    url('../assets/fonts/Mona-Sans-Bold.woff2'),
+    url('../assets/fonts/Mona-Sans-ExtraBold.woff2'),
+    url('../assets/fonts/Mona-Sans-SemiBold.woff2'),
+    url('../assets/fonts/Mona-Sans-Regular.woff2');
+  font-weight: 900 700 800 600 400;
+  font-stretch: 75% 125%;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Mona Sans,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -23,8 +35,29 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
   }
+}
+
+.post-background-header {
+  background-color: #0B0F14;
+  height: 85vh;
+}
+
+.h1-post {
+  color: #DBDBDB;
+  font-size: 76px;
+  line-height: 76px;
+  font-weight: 800;
+  width: 700px;
+}
+
+.p-post-description{
+  color: #DBDBDB;
+  font-size: 20px;
+  font-weight: 400;
+  width: 720px;
 }
