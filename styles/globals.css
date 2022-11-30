@@ -47,6 +47,14 @@ h3 {
   color: #1D2126;
 }
 
+h4 {
+  font-size: 32px !important;
+  line-height: 36px !important;
+  letter-spacing: -.03em !important;
+  font-weight: 800;
+  color: #1D2126;
+}
+
 p {
   color: #DBDBDB;
   font-size: 20px;
@@ -87,4 +95,10 @@ p {
   max-width: 1280px;
   box-sizing: border-box;
   margin-top: 48px;
+}
+
+.blog-taste-text{
+  font-size: 18px;
+  color: #57606a;
+  line-height: 24px;
 }
