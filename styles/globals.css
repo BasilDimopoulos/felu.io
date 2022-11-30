@@ -39,7 +39,15 @@ h1 {
   width: 700px;
 }
 
-p{
+h3 {
+  font-size: 48px !important;
+  line-height: 52px !important;
+  letter-spacing: -.03em !important;
+  font-weight: 800;
+  color: #1D2126;
+}
+
+p {
   color: #DBDBDB;
   font-size: 20px;
   font-weight: 400;
@@ -57,4 +65,26 @@ p{
   font-size: 32px;
   font-weight: 600;
   line-height: 60px;
+}
+
+.border-top {
+  color: #24292f;
+  border-top: 1px solid;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.sub-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.container-xl {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  max-width: 1280px;
+  box-sizing: border-box;
+  margin-top: 48px;
 }
