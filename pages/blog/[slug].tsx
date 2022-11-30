@@ -43,7 +43,7 @@ const PostPage = ({ frontMatter: { title, description, thumbnailUrl }, mdxSource
           <img src={thumbnailUrl}></img>
         </div>
       </div>
-      <div className='bg-white'>
+      <div className='post-content'>
         <MDXRemote {...mdxSource} components={{ Button, SyntaxHighlighter }} />
       </div>
     </div>
