@@ -4,7 +4,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import Button from '../../components/Button.tsx'
+import Button from '../../components/Button'
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync(path.join('posts'))
@@ -35,16 +35,20 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
 const PostPage = ({ frontMatter: { title, description, thumbnailUrl }, mdxSource }) => {
   return (
-    <div>
-      <div className="pt-20 post-background-header">
-        <div className='flex flex-col items-center'>
-          <h1 className='h1-post text-center'>{title}</h1>
-          <p className="p-post-description text-center mt-6 mb-10">{description}</p>
+    <div className='w-full bg-[#22272e]'>
+      <div className='container-xl'>
+        <div className='blog-view'>
+          <h1 className='h1-post'>{title}</h1>
+          <p className="post-description mt-3 mb-16">{description}</p>
           <img src={thumbnailUrl}></img>
         </div>
       </div>
-      <div className='post-content'>
-        <MDXRemote {...mdxSource} components={{ Button, SyntaxHighlighter }} />
+      <div className='w-full bg-[#ececec]'>
+        <div className='post-container'>
+          <div className=''>
+          <MDXRemote {...mdxSource} components={{ Button, SyntaxHighlighter }} />
+          </div>
+        </div>
       </div>
     </div>
   )

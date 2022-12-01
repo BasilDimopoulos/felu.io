@@ -14,18 +14,6 @@
   font-stretch: 75% 125%;
 }
 
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-
-  body {
-    color: white;
-    background: black;
-  }
-}
-
 .post-background-header {
   background-color: #0B0F14;
   height: 85vh;
@@ -55,18 +43,18 @@ h4 {
   color: #1D2126;
 }
 
-p {
-  color: #DBDBDB;
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.post-content {
-  background-color: #e6e6e6;
-  color: #252424;
-  max-width: 750px;
+.post-container {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 20px;
   line-height: 32px;
+  padding-left: 96px;
+  padding-right: 96px;
+}
+
+p {
+  color: #252424;
 }
 
 .post-content h2 {
@@ -94,11 +82,30 @@ p {
   margin-left: auto !important;
   max-width: 1280px;
   box-sizing: border-box;
-  margin-top: 48px;
+  padding-top: 48px;
 }
 
-.blog-taste-text{
+.blog-taste-text {
   font-size: 18px;
   color: #57606a;
   line-height: 24px;
+}
+
+.blog-view {
+  padding: 96px;
+}
+
+.h1-post {
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  width: 100%;
+  font-weight: 800;
+}
+
+.post-description {
+  font-size: 18px !important;
+  line-height: 24px;
+  color: #adbac7 !important;
 }
