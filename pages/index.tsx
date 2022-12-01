@@ -1,18 +1,25 @@
-import Image from 'next/image'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Link from 'next/link'
 import LandingSection from '../components/LandingSection'
 import PostView from '../components/PostView'
 
-export default function Home({posts}) {
+export default function Home({ posts }) {
   return (
-    <div>
+    <div className='bg-white'>
       <LandingSection />
-      {posts.map((post, index) => (
-        <PostView post={post} index={index}/>
-      ))}
+
+      <div className='container-xl '>
+        <p className='sub-text text-gray-900'>Read</p>
+        <h3>The Blog</h3>
+        <div className='border-top'></div>
+      </div>
+
+      <div className='container-xl '>
+        {posts.map((post, index) => (
+          <PostView post={post} index={index} />
+        ))}
+      </div>
     </div>
   )
 }
