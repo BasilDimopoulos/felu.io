@@ -39,8 +39,8 @@ const PostPage = ({ frontMatter: { title, description, tags, thumbnailUrl }, mdx
     <div className='w-full bg-[#22272e]'>
       <div className='container-xl'>
         <div className='blog-view'>
-          <div>
-            {tags.map(tag => (<p key={tag}>{tag}</p>))}
+          <div className='flex'>
+            {tags.map(tag => (<p className='pr-5 text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-red-500' key={tag}>{tag}</p>))}
             {/* <p>{tags}</p> */}
           </div>
           <h1 className='h1-post'>{title}</h1>
