@@ -5,6 +5,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import Button from '../../components/Button'
+import React from 'react'
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync(path.join('posts'))
@@ -33,11 +34,15 @@ export const getStaticProps = async ({ params: { slug } }) => {
   }
 }
 
-const PostPage = ({ frontMatter: { title, description, thumbnailUrl }, mdxSource }) => {
+const PostPage = ({ frontMatter: { title, description, tags, thumbnailUrl }, mdxSource }) => {
   return (
     <div className='w-full bg-[#22272e]'>
       <div className='container-xl'>
         <div className='blog-view'>
+          <div className='flex'>
+            {tags.map(tag => (<p className='pr-5 text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-red-500' key={tag}>{tag}</p>))}
+            {/* <p>{tags}</p> */}
+          </div>
           <h1 className='h1-post'>{title}</h1>
           <p className="post-description mt-3 mb-16">{description}</p>
           <img src={thumbnailUrl}></img>
@@ -46,7 +51,7 @@ const PostPage = ({ frontMatter: { title, description, thumbnailUrl }, mdxSource
       <div className='w-full bg-[#ececec]'>
         <div className='post-container'>
           <div className=''>
-          <MDXRemote {...mdxSource} components={{ Button, SyntaxHighlighter }} />
+            <MDXRemote {...mdxSource} components={{ Button, SyntaxHighlighter }} />
           </div>
         </div>
       </div>
