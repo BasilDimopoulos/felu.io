@@ -8,17 +8,18 @@ export default function Home({ posts }) {
   return (
     <div className='bg-white'>
       <LandingSection />
+      <div className='p-8 lg:p-24 mt-10'>
+        <div className='container-xl'>
+          <p className='sub-text text-gray-900'>Read</p>
+          <h3>The Blog</h3>
+          <div className='border-top'></div>
+        </div>
 
-      <div className='container-xl '>
-        <p className='sub-text text-gray-900'>Read</p>
-        <h3>The Blog</h3>
-        <div className='border-top'></div>
-      </div>
-
-      <div className='container-xl '>
-        {posts.map((post, index) => (
-          <PostView post={post} index={index} />
-        ))}
+        <div className='container-xl '>
+          {posts.map((post, index) => (
+            <PostView post={post} index={index} />
+          ))}
+        </div>
       </div>
     </div>
   )
