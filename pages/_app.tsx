@@ -42,7 +42,7 @@ export default function MyApp({ Component, pageProps }: any) {
   return (
     <>
       <Head>
-        <title>Next and MDX Blog</title>
+        <title>felu.io</title>
       </Head>
       <div>
         <NavBar />
