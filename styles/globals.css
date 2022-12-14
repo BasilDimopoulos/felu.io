@@ -27,7 +27,7 @@ h1 {
   width: 700px;
 }
 
-h3 {
+h2 {
   font-size: 48px !important;
   line-height: 52px !important;
   letter-spacing: -.03em !important;
@@ -35,9 +35,17 @@ h3 {
   color: #1D2126;
 }
 
+h3 {
+  font-size: 28px !important;
+  line-height: 32px !important;
+  letter-spacing: -.03em !important;
+  font-weight: 800;
+  color: #1D2126;
+}
+
 h4 {
-  font-size: 32px !important;
-  line-height: 36px !important;
+  font-size: 34px !important;
+  line-height: 38px !important;
   letter-spacing: -.03em !important;
   font-weight: 800;
   color: #1D2126;
