@@ -49,8 +49,6 @@ h4 {
   margin-left: auto;
   font-size: 20px;
   line-height: 32px;
-  padding-left: 96px;
-  padding-right: 96px;
 }
 
 p {
@@ -76,13 +74,10 @@ p {
 }
 
 .container-xl {
-  padding-left: 24px !important;
-  padding-right: 24px !important;
   margin-right: auto !important;
   margin-left: auto !important;
   max-width: 1280px;
   box-sizing: border-box;
-  padding-top: 48px;
 }
 
 .blog-taste-text {
@@ -91,21 +86,14 @@ p {
   line-height: 24px;
 }
 
-.blog-view {
-  padding: 96px;
-}
-
-.h1-post {
-  font-size: 48px;
-  line-height: 52px;
-  letter-spacing: -0.03em;
-  font-weight: 700;
-  width: 100%;
-  font-weight: 800;
-}
-
 .post-description {
   font-size: 18px !important;
   line-height: 24px;
   color: #adbac7 !important;
+}
+
+h3 {
+  font-size: 28px !important;
+  line-height: 32px !important;
+  margin-bottom: 15px;
 }
