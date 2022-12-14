@@ -11,7 +11,7 @@ export default function Home({ posts }) {
       <div className='p-8 lg:p-24 mt-10'>
         <div className='container-xl'>
           <p className='sub-text text-gray-900'>Read</p>
-          <h3>The Blog</h3>
+          <h2>The Blog</h2>
           <div className='border-top'></div>
         </div>
 

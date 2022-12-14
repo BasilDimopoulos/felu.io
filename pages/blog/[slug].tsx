@@ -4,7 +4,6 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import Button from '../../components/Button'
 import React from 'react'
 
 export const getStaticPaths = async () => {
@@ -51,7 +50,7 @@ const PostPage = ({ frontMatter: { title, description, tags, thumbnailUrl }, mdx
       <div className='w-full bg-[#ececec]'>
         <div className='post-container lg:p-24 p-8'>
           <div className=''>
-            <MDXRemote {...mdxSource} components={{ Button, SyntaxHighlighter }} />
+            <MDXRemote {...mdxSource} components={{SyntaxHighlighter }} />
           </div>
         </div>
       </div>
