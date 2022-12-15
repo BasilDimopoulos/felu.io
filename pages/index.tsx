@@ -15,9 +15,9 @@ export default function Home({ posts }) {
           <div className='border-top'></div>
         </div>
 
-        <div className='container-xl '>
+        <div className='container-xl'>
           {posts.map((post, index) => (
-            <PostView post={post} index={index} />
+            <PostView post={post} index={index} key={index}/>
           ))}
         </div>
       </div>
