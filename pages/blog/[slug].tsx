@@ -4,7 +4,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync(path.join('posts'))
@@ -34,6 +34,9 @@ export const getStaticProps = async ({ params: { slug } }) => {
 }
 
 const PostPage = ({ frontMatter: { title, description, tags, thumbnailUrl }, mdxSource }) => {
+  useEffect(() => {
+    document.title = title;
+  }, []);
   return (
     <div className='w-full bg-[#22272e]'>
       <div className='container-xl'>
