@@ -5,14 +5,14 @@ export default function NavBar() {
         <Navbar className="bg-gray-900"
             fluid={true}
         >
-            <Navbar.Brand href="https://felu.io/">
+            <Navbar.Brand href="/">
                 <img
-                    src="/images/Kara-logo.png"
+                    src="/images/felu-logo.svg"
                     className="mr-3 h-6 sm:h-9"
                     alt="felu.io"
                 />
             </Navbar.Brand>
-            <Navbar.Toggle className="hover:bg-gray-700"/>
+            {/* <Navbar.Toggle className="hover:bg-gray-700"/>
             <Navbar.Collapse>
                 <Navbar.Link
                     href="/navbars"
@@ -21,7 +21,7 @@ export default function NavBar() {
                 >
                     <p className="text-white hover:text-gray-300 text-[15px] uppercase font-bold">Home</p>
                 </Navbar.Link>
-                <Navbar.Link href="/navbars" className="hover:bg-gray-700">
+                <Navbar.Link href="/" className="hover:bg-gray-700">
                     <p className="text-white hover:text-gray-300 text-[15px] uppercase font-bold">Latest Blogs</p>
                 </Navbar.Link>
                 <Navbar.Link href="/navbars" className="hover:bg-gray-700">
@@ -30,7 +30,7 @@ export default function NavBar() {
                 <Navbar.Link href="/navbars" className="hover:bg-gray-700">
                     <p className="text-white hover:text-gray-300 text-[15px] uppercase font-bold">Contact</p>
                 </Navbar.Link>
-            </Navbar.Collapse>
+            </Navbar.Collapse> */}
         </Navbar>
     )
 }
