@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -6,7 +8,14 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      customfontname: ['Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif', ...defaultTheme.fontFamily.sans],
+    },
+    extend: {
+      fontFamily: {
+        anton: ["'Anton'", defaultTheme.fontFamily.sans],
+      }
+    },
   },
   plugins: [
     require('flowbite/plugin')

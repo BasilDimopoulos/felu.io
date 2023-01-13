@@ -1,8 +1,13 @@
 export default function LandingSection() {
     return (
-        <div className="h-[75vh] flex flex-col items-center text-center justify-center bg-[url('/images/repeated-square-dark.webp')]">
-            <h1 className="w-auto leading-[52px] text-[48px] md:text-[72px] md:leading-[80px] text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-red-500">Hello World</h1>
-            <p className="mt-3 px-5 text-white">Welcome to the other side. The journey of your developer experience is boosted here.</p>
+        <div className="w-full h-[800px] sm:h-[920px] flex">
+            <div className="bg-[#201E1E] w-full">
+                <div className="p-12 md:p-20 h-full flex flex-col justify-center font-normal">
+                    <h1 className="text-white font-anton text-[32px] leading-10 md:text-[65px] md:leading-[68px] uppercase">Normal tutorials make you scream</h1>
+                    <p className="mt-3 md:mt-6 text-lg text-slate-300 max-w-3xl">Meet Felu. Your new go to story time for the learned developer.</p>
+                </div>
+            </div>
+            <div className="md:w-full h-full bg-[url(/images/felu-landing-comic.jpg)] bg-cover bg-center" />
         </div>
     )
 }

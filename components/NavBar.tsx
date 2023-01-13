@@ -2,13 +2,13 @@ import { Navbar } from "flowbite-react";
 
 export default function NavBar() {
     return (
-        <Navbar className="bg-gray-900"
+        <Navbar className="bg-transparent absolute pt-5"
             fluid={true}
         >
             <Navbar.Brand href="/">
                 <img
                     src="/images/felu-logo.svg"
-                    className="mr-3 h-6 sm:h-9"
+                    className="mr-3 h-6 sm:h-9 pl-10 md:pl-16"
                     alt="felu.io"
                 />
             </Navbar.Brand>
