@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Mona-Sans';
-  src:
-    url('../assets/fonts/Mona-Sans-Black.woff2'),
-    url('../assets/fonts/Mona-Sans-Bold.woff2'),
-    url('../assets/fonts/Mona-Sans-ExtraBold.woff2'),
-    url('../assets/fonts/Mona-Sans-SemiBold.woff2'),
-    url('../assets/fonts/Mona-Sans-Regular.woff2');
-  font-weight: 900 700 800 600 400;
-  font-stretch: 75% 125%;
-}
-
 .post-background-header {
   background-color: #0B0F14;
   height: 85vh;
@@ -22,9 +10,6 @@
 h1 {
   color: #DBDBDB;
   font-size: 76px;
-  line-height: 76px;
-  font-weight: 800;
-  width: 700px;
 }
 
 h2 {
