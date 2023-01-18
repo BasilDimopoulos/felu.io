@@ -3,11 +3,13 @@ import path from 'path'
 import matter from 'gray-matter'
 import LandingSection from '../components/LandingSection'
 import PostView from '../components/PostView'
+import BookPlayer from '../components/BookPlayer'
 
 export default function Home({ posts }) {
   return (
     <div className='bg-white'>
       <LandingSection />
+      <BookPlayer />
       <div className='p-8 lg:p-24 mt-10'>
         <div className='container-xl'>
           <p className='sub-text text-gray-900'>Read</p>
