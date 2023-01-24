@@ -2,9 +2,35 @@ import React, { useRef, useEffect, useState } from "react";
 import BookImageComponent from "./BookImageComponent";
 import BookTextComponent from "./BookTextComponent";
 import TextData from "../public/json_files/demo-text.json"
+import ImageData from "../public/json_files/image-demo.json"
+import Page from "../models/PaageModels";
+import Book from "../models/BookModel";
+
+
+function generatePage(page: Page) {
+    if (page.type == "text") {
+        return <BookTextComponent content={page.value} />
+    } else if (page.type == "image") {
+        return <BookImageComponent content={page.value} />
+    }
+}
+
+
 
 export default function BookPlayer() {
-    console.log(TextData.value)
+    const [currentLocation, setLocation] = useState(1);
+    let pages = [new Page(TextData.type, TextData.value), new Page(ImageData.type, ImageData.value), new Page(TextData.type, TextData.value), new Page(TextData.type, TextData.value)];
+    let chapter: Book = new Book(pages);
+
+    function movePages() {
+
+        console.log(currentLocation);
+
+        if (currentLocation + 2 < pages.length) {
+            setLocation(currentLocation + 2);
+        }
+    }
+
     return (
         <div className="w-full h-[920px]  pl-44 pr-44 pt-16 pb-16">
             <div className="w-full bg-slate-500 h-1 mb-5"></div>
@@ -12,14 +38,15 @@ export default function BookPlayer() {
                 {/* container 1 */}
                 <div className="flex-1 flex flex-col justify-center">
                     <div className="w-10/12">
-                        <BookTextComponent text={TextData.value} />
+                        {generatePage(pages[currentLocation - 1])}
                     </div>
                 </div>
                 {/* container 2 */}
                 <div className="flex-1">
-                    <BookImageComponent />
+                    {generatePage(pages[currentLocation])}
                 </div>
             </div>
+            <button onClick={movePages}>Next</button>
         </div>
     )
 }
