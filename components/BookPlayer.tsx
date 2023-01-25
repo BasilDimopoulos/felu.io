@@ -22,12 +22,18 @@ export default function BookPlayer() {
     let pages = [new Page(TextData.type, TextData.value), new Page(ImageData.type, ImageData.value), new Page(TextData.type, TextData.value), new Page(TextData.type, TextData.value)];
     let chapter: Book = new Book(pages);
 
-    function movePages() {
+    function moveForward() {
 
         console.log(currentLocation);
 
         if (currentLocation + 2 < pages.length) {
             setLocation(currentLocation + 2);
+        }
+    }
+
+    function moveBackward() {
+        if (currentLocation - 2 > 0) {
+            setLocation(currentLocation - 2);
         }
     }
 
@@ -46,7 +52,8 @@ export default function BookPlayer() {
                     {generatePage(pages[currentLocation])}
                 </div>
             </div>
-            <button onClick={movePages}>Next</button>
+            <button onClick={moveForward}>Next</button>
+            <button className="pl-4" onClick={moveBackward}>Back</button>
         </div>
     )
 }

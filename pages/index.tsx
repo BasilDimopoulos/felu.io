@@ -3,13 +3,16 @@ import path from 'path'
 import matter from 'gray-matter'
 import LandingSection from '../components/LandingSection'
 import PostView from '../components/PostView'
-import BookPlayer from '../components/BookPlayer'
+import { Button } from 'flowbite-react'
 
 export default function Home({ posts }) {
   return (
     <div className='bg-white'>
       <LandingSection />
-      <BookPlayer />
+      <div className='w-full flex justify-center items-center text-center flex-col'>
+        <p className='text-xl w-3/4 mt-8 mb-3'>Felu aims to teach coding in a more stimulating, fun way. Rather than watching courses, reading tutorials are skipping your lectures, we teach coding through stories here. See the demo blow for how we do things around here.</p>
+        <Button className='w-32' href='/demo'>See the demo </Button>
+      </div>
       <div className='p-8 lg:p-24 mt-10'>
         <div className='container-xl'>
           <p className='sub-text text-gray-900'>Read</p>
@@ -19,7 +22,7 @@ export default function Home({ posts }) {
 
         <div className='container-xl'>
           {posts.map((post, index) => (
-            <PostView post={post} index={index} key={index}/>
+            <PostView post={post} index={index} key={index} />
           ))}
         </div>
       </div>
