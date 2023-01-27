@@ -5,6 +5,7 @@ import TextData from "../public/json_files/demo-text.json"
 import ImageData from "../public/json_files/image-demo.json"
 import Page from "../models/PaageModels";
 import Book from "../models/BookModel";
+import BookProgressBar from "./BookProgressBar";
 
 
 function generatePage(page: Page) {
@@ -15,6 +16,11 @@ function generatePage(page: Page) {
     }
 }
 
+function calculateLocation(currentLocation: number, chapterLength: number){
+    const progress = currentLocation / chapterLength * 100;
+    return progress;
+}
+
 
 
 export default function BookPlayer() {
@@ -23,8 +29,6 @@ export default function BookPlayer() {
     let chapter: Book = new Book(pages);
 
     function moveForward() {
-
-        console.log(currentLocation);
 
         if (currentLocation + 2 < pages.length) {
             setLocation(currentLocation + 2);
@@ -39,7 +43,7 @@ export default function BookPlayer() {
 
     return (
         <div className="w-full h-[920px]  pl-44 pr-44 pt-16 pb-16">
-            <div className="w-full bg-slate-500 h-1 mb-5"></div>
+            <BookProgressBar width={`w-[${calculateLocation(currentLocation, pages.length)}%]`}/>
             <div className="flex h-full pt-5">
                 {/* container 1 */}
                 <div className="flex-1 flex flex-col justify-center">
