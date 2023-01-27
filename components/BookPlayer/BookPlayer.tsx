@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import BookImageComponent from "./BookImageComponent";
 import BookTextComponent from "./BookTextComponent";
-import TextData from "../public/json_files/demo-text.json"
-import ImageData from "../public/json_files/image-demo.json"
-import Page from "../models/PaageModels";
-import Book from "../models/BookModel";
+import TextData from "../../public/json_files/demo-text.json"
+import ImageData from "../../public/json_files/image-demo.json"
+import Page from "../../models/PaageModels";
+import Book from "../../models/BookModel";
 import BookProgressBar from "./BookProgressBar";
 
 
@@ -16,7 +16,7 @@ function generatePage(page: Page) {
     }
 }
 
-function calculateLocation(currentLocation: number, chapterLength: number){
+function calculateLocation(currentLocation: number, chapterLength: number) {
     const progress = currentLocation / chapterLength * 100;
     return progress;
 }
@@ -43,7 +43,7 @@ export default function BookPlayer() {
 
     return (
         <div className="w-full h-[920px]  pl-44 pr-44 pt-16 pb-16">
-            <BookProgressBar width={`w-[${calculateLocation(currentLocation, pages.length)}%]`}/>
+            <BookProgressBar width={`w-[${calculateLocation(currentLocation, pages.length)}%]`} />
             <div className="flex h-full pt-5">
                 {/* container 1 */}
                 <div className="flex-1 flex flex-col justify-center">
