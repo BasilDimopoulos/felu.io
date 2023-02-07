@@ -1,4 +1,4 @@
-import Page from "./PaageModels";
+import Page from "./PageModels";
 export default class Book {
     pages: Page[];
     pageLength: Number;
