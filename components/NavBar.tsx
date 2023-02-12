@@ -7,8 +7,8 @@ export default function NavBar() {
         >
             <Navbar.Brand href="/">
                 <img
-                    src="/images/felu-logo.svg"
-                    className="mr-3 h-6 sm:h-9 pl-10 md:pl-16"
+                    src="/images/felu-moon.png"
+                    className="mr-3 h-6 sm:h-14 pl-10 md:pl-16"
                     alt="felu.io"
                 />
             </Navbar.Brand>
