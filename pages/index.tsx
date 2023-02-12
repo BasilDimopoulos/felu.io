@@ -4,14 +4,17 @@ import matter from "gray-matter";
 import LandingSection from "../components/LandingSection";
 import PostView from "../components/PostView";
 import { Button } from "flowbite-react";
-import HomePageComponent from "../components/HomePageComponent";
+import HomePageComponentLeft from "../components/HomePageComponentLeft";
+import HomePageComponentRight from "../components/HomePageComponentRight";
 
 export default function Home({ posts }) {
   return (
     <div className="bg-white">
       <LandingSection />
 
-      <HomePageComponent/>
+      <HomePageComponentLeft/>
+      <HomePageComponentRight/>
+
 
       <div className="w-full flex justify-center items-center text-center flex-col">
         <p className="text-xl w-3/4 mt-8 mb-3">
