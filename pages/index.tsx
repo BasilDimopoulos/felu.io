@@ -12,10 +12,6 @@ export default function Home({ posts }) {
     <div className="bg-white">
       <LandingSection />
 
-      <HomePageComponentLeft/>
-      <HomePageComponentRight/>
-
-
       <div className="w-full flex justify-center items-center text-center flex-col">
         <p className="text-xl w-3/4 mt-8 mb-3">
           Felu aims to teach coding in a more stimulating, fun way. Rather than
