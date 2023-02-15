@@ -23,14 +23,15 @@ export default function Home({ posts }) {
           See the demo{" "}
         </Button>
       </div>
-      <div className="p-8 lg:p-24 mt-10">
-        <div className="container-xl">
+      
+      <div className="mx-auto w-full pl-14 pr-14 container mt-10">
+        <div className="">
           <p className="sub-text text-gray-900">Read</p>
           <h2>The Blog</h2>
           <div className="border-top"></div>
         </div>
 
-        <div className="container-xl">
+        <div className="">
           {posts.map((post, index) => (
             <PostView post={post} index={index} key={index} />
           ))}
