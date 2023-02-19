@@ -7,6 +7,7 @@ import Page from "../../models/PageModels";
 import Book from "../../models/BookModel";
 import BookProgressBar from "./BookProgressBar";
 
+
 function generatePage(page: Page) {
   if (page.type == "text") {
     return <BookTextComponent content={page.value} />;
@@ -68,8 +69,8 @@ export default function BookPlayer(this: any) {
       />
       <div className="flex h-full mt-8">
         {/* container 1 */}
-        <div className="flex-1 flex flex-col justify-center">
-          <div className="w-10/12">
+        <div className="flex-1 flex flex-col justify-center max-h-fit">
+          <div className="w-10/12" id="bookContent">
             {generatePage(pages[currentLocation - 1])}
           </div>
         </div>
